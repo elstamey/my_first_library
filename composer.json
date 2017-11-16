@@ -1,6 +1,13 @@
 {
     "name": "elstamey/my_first_library",
-    "description": "Created with composer init",
+    "description": "This is my very first library created with composer init",
+    "keywords": [
+        "my_first_library",
+        "tutorial",
+        "phpworld 2017",
+        "workshop"
+    ],
+    "homepage": "http://www.elstamey.com/my_first_library",
     "type": "library",
     "require": {
         "php": "^5.6 || ^7.0"
@@ -12,7 +19,28 @@
     "authors": [
         {
             "name": "Emily Stamey",
-            "email": "elstamey@gmail.com"
+            "email": "elstamey@gmail.com",
+            "homepage": "http://www.elstamey.com/",
+            "role": "Developer"
         }
-    ]
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "~5.6 || ~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "elstamey\\my_first_library\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "elstamey\\my_first_library\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    }
 }
