@@ -2,12 +2,11 @@
 /**
  * Class FirstClass
  *
- * @package conquerorsoft\my_first_library
- * @author  Emily Stamey
+ * @package elstamey\my_first_library
+ * @author  Emily Stamey <elstamey@gmail.com>
  */
 
 namespace elstamey\my_first_library;
-
 
 class FirstClass
 {
